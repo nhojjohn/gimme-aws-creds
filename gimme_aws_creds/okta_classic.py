@@ -290,7 +290,7 @@ class OktaClassicClient(object):
         # Passing the stateToken to the Authentication API for step-up auth doesn't work in OIE
         if state_token is not None and response.status_code == 401:
             raise errors.GimmeAWSCredsError(
-                "LOGIN ERROR: Step-up authetication is not supported when using the '--force_classic' parameter", 2
+                "LOGIN ERROR: Step-up authentication is not supported when using the '--force_classic' parameter", 2
             )
 
         response.raise_for_status()
